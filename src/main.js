@@ -52,7 +52,6 @@ $(".new").on("click", () => {
     if (url.indexOf("http") !== 0) {
         url = "https://" + url
     }
-    console.log(url)
     hashMap.push({
         logo: removeX(url)[0],
         url: url
@@ -61,15 +60,14 @@ $(".new").on("click", () => {
 })
 
 window.onbeforeunload = () => {
-    console.log("页面关闭")
     const string = JSON.stringify(hashMap)
     localStorage.setItem("x", string)
 }
+const input=document.getElementsByTagName('input')[0];
 $(document).on("keypress", (e) => {
-    console.log(e.key)
     const key = e.key
     for (let i = 0; i < hashMap.length; i++) {
-        if (hashMap[i].logo.toLowerCase() === key && e.target === this) {
+        if (hashMap[i].logo.toLowerCase() === key&&e.target!==input) {
             window.open(hashMap[i].url)
         }
     }
