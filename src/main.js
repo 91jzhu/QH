@@ -67,7 +67,7 @@ const input=document.getElementsByTagName('input')[0];
 $(document).on("keypress", (e) => {
     const key = e.key
     for (let i = 0; i < hashMap.length; i++) {
-        if (hashMap[i].logo.toLowerCase() === key&&e.target!==input) {
+        if ((hashMap[i].logo.toLowerCase() === key||hashMap[i].logo===key)&&e.target!==input) {
             window.open(hashMap[i].url)
         }
     }
