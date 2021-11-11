@@ -23,10 +23,7 @@ ul li:hover{
 }
 @media(min-width:500px){
     .search{
-        margin-top: 20px;
-        margin-bottom: 20px;
-        margin-left: auto;
-        margin-right: auto;
+        margin: 20px auto;
         max-width:600px;
     }
 }
@@ -47,11 +44,11 @@ ul li:hover{
     margin-right: auto;
 }
 .search>input{
+    outline: none;
     padding:0 10px;
     width:100%;
     height:40px;
     margin-right: 10px;
-    border:none;
     border-radius: 36px;
     border:1px solid #dddddd;
 }
